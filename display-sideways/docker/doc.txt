@@ -1,0 +1,6 @@
+# maybe needed?
+sudo usermod -aG docker $USER
+sudo systemctl restart docker
+
+sudo docker build -t display-sideways .
+docker run -v /home/pi/docker_storage:/home/pi  --privileged -it display_sideways

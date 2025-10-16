@@ -17,6 +17,14 @@ RUN pip3 install --upgrade adafruit-python-shell
 RUN useradd -r pi
 WORKDIR /home/pi
 
+# install pi-tft to image
+RUN pip3 install -y --upgrade adafruit-python-shell click Flask-SQLAlchemy
+RUN git clone https://github.com/adafruit/Raspberry-Pi-Installer-Scripts.git
+RUN python3 /home/pi/adafruit-pitft.py --display=28c --rotation=90 --install-type=mirror
+
+
+
+
 
 
 
