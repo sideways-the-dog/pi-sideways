@@ -4,3 +4,10 @@ sudo systemctl restart docker
 
 sudo docker build -t display-sideways .
 docker run -v /home/pi/docker_storage:/home/pi  --privileged -it display_sideways
+
+# remove everything docker
+docker system prune -a
+
+# remove all images
+docker image prune -a
+
